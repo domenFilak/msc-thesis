@@ -20,7 +20,6 @@ module.exports = function authMiddleware(req, res, next) {
   //tukaj poves da ni pravo geslo in ime
 
   //če uporabnik ni pooblaščen za dostop
-
   res.set('WWW-Authenticate', 'Basic realm="user_pages"'); //v odgovoru strežnika nastavimo glavo avtorizacije: metoda je Basic in parameter realm="user_pages"
                                                           //klientu povemo, da je potrebna avtentikacija za dostop, se pojavi okno za vnos uporab. imena in gesla
   res.status(401).send('Authentication required.'); //statusno kodo nastavimo na 401, kratko tekstovno sporočilo in pošljemo klientu vključno z glavo avtorizacije

@@ -13,7 +13,7 @@ app.use(authMiddleware); //uporabi lasten middleware za vse endpointe (poti) od 
 //korenska pot, uporablja authMiddleware in ob uspešni prijavi se izpiše spodnje sporočilo
 app.get('/', (req, res) => {
     res.status(200).send({msg: "User authenticated!"});
-})
+});
 
 //zaženi strežnik na vratih PORT in izpiši sporočilo  
 app.listen(PORT, () => {
