@@ -17,7 +17,7 @@ module.exports = function authMiddleware(req, res, next) {
   if (username === 'admin' && password === 'admin') { //če sta uporabniško ime in geslo enaka 'admin', je uporabnik pooblaščen za dostop
     return next(); //vrnemo next(), pomeni da se je ta middleware uspešno izvedel in se lahko za njim izvede naslednji: to je sama logika v naši app.get() poti
   }
-  //tukaj poves da ni pravo geslo in ime
+  //tukaj lahko z neko dodano kodo opozorimo, da uporabniško ime in/ali geslo ni pravilno
 
   //če uporabnik ni pooblaščen za dostop
   res.set('WWW-Authenticate', 'Basic realm="user_pages"'); //v odgovoru strežnika nastavimo glavo avtorizacije: metoda je Basic in parameter realm="user_pages"
