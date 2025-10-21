@@ -25,6 +25,6 @@ Ta repozitorij vsebuje praktične implementacije različnih avtentikacijskih met
 
 - Za lažji/enostavnejši prikaz in razumevanje avtentikacijskih metod so `.env` datoteke z nekaterimi "občutljivimi" podatki (v resnici ne ponujajo dostopa do ničesar, vendar pa so le potrebni za prikaz delovanja avtentikacijskih metod prikazanih v kodi)
   vključene v ta github repozitorij (razen za OAuth 2.0).  
-- Običajno `.env` datoteke vsebujejo občutljive informacije in jih **nikoli ne smemo naložiti v javne repozitorije**.  
+- Običajno `.env` datoteke vsebujejo občutljive informacije in jih **NIKOLI NE SMEMO NALOŽITI V JAVNE REPOZITORIJE**.  
 - V tem projektu vrednosti v `.env` datotekah **ne predstavljajo resničnih skrivnosti**—so zgolj primeri za učenje in razumevanje kode.  
 - Vključitev teh datotek tukaj omogoča **lažje zagon kode brez dodatne nastavitev**, vendar ne smemo pozabiti: v resničnih projektih morajo biti skrivnosti vedno varno zaščitene.
