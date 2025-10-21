@@ -35,7 +35,11 @@ app.get('/', (req, res) => {
         - Po uspešni prijavi bo Google preusmeril uporabnika na callback URL, ki ga definira GoogleStrategy.
 */
 app.get('/auth/google', 
-    passport.authenticate('google', {scope: ['email', 'profile']}) //passport preusmeri uporabnika na Google-ovo prijavno stran
+    passport.authenticate('google', //passport preusmeri uporabnika na Google-ovo prijavno stran
+        {
+            scope: ['email', 'profile'], //dovoljenja ("scopes"), katera želimo od uporabnika za spletno aplikacijo
+            prompt: 'consent' //ob vsaki prijavi naj uporabnik potrdi/zavrne dovoljenja, katera želi spletna aplikacija
+        }) 
 );
 
 /*
